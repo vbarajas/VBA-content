@@ -22,6 +22,8 @@ Possible causes:
 - You tried to update a field in a record or table that is currently locked by another user. Wait for the other user to finish working with the record or table, and then try the operation again.
     
 - In Microsoft Access, you tried to change the value of a control whose  **Locked** property is set to **Yes**.
+
+- You tried to update a field in a record on a subform that is inside a form where the sql queries behind the subform and the form use the same column names, causing a crossed reference of column names. Use an alias name on the sql query behind the form for the column names that repeat on the sql query behind the subform.
     
 
  **ACCESS SUPPORT RESOURCES**<br>
